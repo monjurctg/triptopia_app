@@ -7,15 +7,13 @@ const guidelineBaseWidth = 350;
 const guidelineBaseHeight = 680;
 
 const scale = (size) => (width / guidelineBaseWidth) * size;
-const verticalScale = (size) => (height / guidelineBaseHeight) * size;
-const moderateScale = (size, factor = 0.5) =>
+export const verticalScale = (size) => (height / guidelineBaseHeight) * size;
+export const moderateScale = (size, factor = 0.5) =>
   size + (scale(size) - size) * factor;
 
-const pressetData = (data) => {
+export const pressetData = (data) => {
   return data.map((p) => p.split(" ").map((st) => presset[st]));
 };
 {
   /* <Text style={{flexWrap:"wrap"}}></Text> */
 }
-
-export {scale, verticalScale, moderateScale, height, width, pressetData};

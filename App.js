@@ -1,8 +1,7 @@
 import {useFonts} from "expo-font";
 import {StatusBar} from "expo-status-bar";
 import {StyleSheet, View} from "react-native";
-
-import UnAuth from "./src/screen/UnAuth";
+import BookingSlider from "./src/screen/BookingSlider";
 
 export default function App() {
   // const [loaded, error] = useFonts({
@@ -17,7 +16,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <>
-        <UnAuth />
+        <BookingSlider />
       </>
 
       <StatusBar style="auto" />
