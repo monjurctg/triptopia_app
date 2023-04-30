@@ -50,7 +50,10 @@ const TextInputCustom = ({
             onChangeText={onChangeText}
             value={value}
             onFocus={() => {
-              setErr({});
+              if (setErr) {
+                setErr({});
+              }
+
               setIsFocused(true);
             }}
             onBlur={() => setIsFocused(false)}
