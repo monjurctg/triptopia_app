@@ -11,7 +11,6 @@ const TextInputCustom = ({
   secureTextEntry,
   keyboardType,
   onChangeText,
-  value,
 }) => {
   const [isFocused, setIsFocused] = useState(false);
 

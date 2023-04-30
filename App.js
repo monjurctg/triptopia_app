@@ -22,10 +22,10 @@ export default function App() {
     <NativeBaseProvider>
       <View style={styles.container}>
         {/* <BookingSlider /> */}
-        <InputMobile />
-        {/* 
+        {/* <InputMobile /> */}
+
         <TextInputCustom />
-        <TextInputCustom /> */}
+        <TextInputCustom />
         {/* <CalenderCustom /> */}
 
         {/* <PhoneNum /> */}
