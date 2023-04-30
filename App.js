@@ -24,7 +24,7 @@ export default function App() {
         {/* <BookingSlider /> */}
         {/* <InputMobile /> */}
 
-        <TextInputCustom />
+        <TextInputCustom label={"Phone "} />
         <TextInputCustom />
         {/* <CalenderCustom /> */}
 
