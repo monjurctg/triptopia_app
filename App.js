@@ -1,11 +1,15 @@
 import {useFonts} from "expo-font";
 import {StatusBar} from "expo-status-bar";
-import {StyleSheet, View} from "react-native";
+import {StyleSheet, Text, View} from "react-native";
 import BookingSlider from "./src/screen/BookingSlider";
+import {NativeBaseProvider, Box} from "native-base";
+import TextInputCustom from "./src/components/tags/TextInputCustom";
+import PhoneNum from "./src/components/tags/PhoneNum";
+import CalenderCustom from "./src/screen/CalenderCustom";
 
 export default function App() {
   // const [loaded, error] = useFonts({
-  //   "Popins-Medium": require("./assets/fonts/Poppins-Medium.ttf"),
+  //   "Popins-Medium": require("./assets/fonts/Poppins-Medium"),
   //   "Popins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
   //   "Popins-Bold": require("./assets/fonts/Poppins-Bold.ttf"),
   // });
@@ -14,13 +18,19 @@ export default function App() {
   //   return <Text preset="p1">Font Loaded...</Text>;
   // }
   return (
-    <View style={styles.container}>
-      <>
-        <BookingSlider />
-      </>
+    <NativeBaseProvider>
+      <View style={styles.container}>
+        {/* <BookingSlider /> */}
 
-      <StatusBar style="auto" />
-    </View>
+        {/* <TextInputCustom />
+        <TextInputCustom /> */}
+        <CalenderCustom />
+
+        {/* <PhoneNum /> */}
+
+        {/* <StatusBar style="auto" /> */}
+      </View>
+    </NativeBaseProvider>
   );
 }
 
@@ -28,7 +38,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
+    // alignItems: "center",
     justifyContent: "center",
   },
 });
