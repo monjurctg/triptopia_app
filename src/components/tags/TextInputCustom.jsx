@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import {MaterialIcons} from "@expo/vector-icons";
 const TextInputCustom = ({
   value,
+  label,
   setValue,
   name,
   err,
@@ -13,11 +14,12 @@ const TextInputCustom = ({
   onChangeText,
 }) => {
   const [isFocused, setIsFocused] = useState(false);
+  console.log(err?.type);
 
   return (
     <View>
       <View style={styles.container}>
-        {err?.type === name && (
+        {err?.type !== undefined && err?.type === name && (
           <View
             style={{
               marginBottom: 10,
@@ -64,7 +66,7 @@ const TextInputCustom = ({
                 isFocused && {color: "#1F75EC"},
                 err?.type && {color: err.type === name && "red"},
               ]}>
-              Phone number
+              {label}
             </Text>
           </View>
         </View>
