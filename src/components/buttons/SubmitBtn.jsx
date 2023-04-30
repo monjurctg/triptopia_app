@@ -2,10 +2,25 @@ import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import React from "react";
 import {scale} from "../../../utils/scale";
 
-const SubmitBtn = ({children, onPress}) => {
+const SubmitBtn = ({children, onPress, title, style, textStyle}) => {
   return (
-    <TouchableOpacity onPress={onPress} style={styles.btnContainer}>
-      {children}
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.btnContainer, {...style}]}>
+      <Text
+        style={{
+          ...textStyle,
+          fontStyle: "normal",
+          fontWeight: "600",
+          fontSize: 16,
+          // lineHeight: 10,
+          textAlign: "center",
+          letterSpacing: 0.04,
+          textTransform: "uppercase",
+          color: "#FFFFFF",
+        }}>
+        {title}
+      </Text>
     </TouchableOpacity>
   );
 };

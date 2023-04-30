@@ -1,6 +1,7 @@
 import {StyleSheet, Text, TextInput, View} from "react-native";
 import React, {useState} from "react";
 import {MaterialIcons} from "@expo/vector-icons";
+import {scale} from "../../../utils/scale";
 const TextInputCustom = ({
   value,
   label,
@@ -66,6 +67,8 @@ const TextInputCustom = ({
             <Text
               style={[
                 styles.placeholderText,
+                {color: "#8F9CA9"},
+
                 isFocused && {color: "#1F75EC"},
                 err?.type && {color: err.type === name && "red"},
               ]}>
@@ -82,7 +85,8 @@ const styles = StyleSheet.create({
   container: {
     // marginTop: 100,
     paddingVertical: 10,
-    paddingHorizontal: 16,
+    marginTop: scale(15),
+    // paddingHorizontal: 16,
   },
   borderLine: {
     borderWidth: 1,
@@ -95,7 +99,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     boxSizing: "border-box",
 
-    borderColor: "#1F75EC",
+    borderColor: "#8F9CA9",
     borderWidth: 1.5,
   },
   focusedBorderLine: {
@@ -106,9 +110,9 @@ const styles = StyleSheet.create({
   },
   inputText: {
     flex: 1,
-    fontSize: 16,
+    fontSize: scale(14),
     marginLeft: 8,
-    height: 35,
+    height: scale(35),
     // color: "#333333",
 
     // borderRadius: 12,

@@ -7,6 +7,7 @@ import TextInputCustom from "./src/components/tags/TextInputCustom";
 import PhoneNum from "./src/components/tags/PhoneNum";
 import CalenderCustom from "./src/screen/CalenderCustom";
 import InputMobile from "./src/screen/auth/InputMobile";
+import UserInfo from "./src/screen/auth/UserInfo";
 
 export default function App() {
   // const [loaded, error] = useFonts({
@@ -23,9 +24,10 @@ export default function App() {
       <View style={styles.container}>
         {/* <BookingSlider /> */}
         {/* <InputMobile /> */}
+        <UserInfo />
 
-        <TextInputCustom label={"Phone "} />
-        <TextInputCustom />
+        {/* <TextInputCustom label={"Phone "} />
+        <TextInputCustom /> */}
         {/* <CalenderCustom /> */}
 
         {/* <PhoneNum /> */}
