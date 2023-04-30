@@ -9,7 +9,7 @@ import React from "react";
 import {scale} from "../../utils/scale";
 import {AntDesign} from "@expo/vector-icons";
 
-const MainLayout = ({children, isHeader}) => {
+const MainLayout = ({children, isHeader, isSkip, isBack}) => {
   return (
     <View style={styles.container}>
       {isHeader && (
@@ -17,9 +17,11 @@ const MainLayout = ({children, isHeader}) => {
           <TouchableOpacity style={styles.back_btn}>
             <AntDesign name="left" size={18} color="#272D37" />
           </TouchableOpacity>
-          <TouchableOpacity>
-            <Text style={styles.skip}>skip</Text>
-          </TouchableOpacity>
+          {isSkip && (
+            <TouchableOpacity>
+              <Text style={styles.skip}>skip</Text>
+            </TouchableOpacity>
+          )}
         </View>
       )}
 

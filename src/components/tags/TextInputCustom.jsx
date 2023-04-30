@@ -1,13 +1,19 @@
 import {StyleSheet, Text, TextInput, View} from "react-native";
 import React, {useState} from "react";
 import {MaterialIcons} from "@expo/vector-icons";
-const TextInputCustom = ({value, setValue}) => {
+const TextInputCustom = ({
+  value,
+  setValue,
+  name,
+  err,
+  setErr,
+  placeholder,
+  secureTextEntry,
+  keyboardType,
+  onChangeText,
+  value,
+}) => {
   const [isFocused, setIsFocused] = useState(false);
-  let name = "phone";
-  let [err, setErr] = useState({
-    type: "phone",
-    message: "Not a valid email address",
-  });
 
   return (
     <View>
@@ -37,6 +43,11 @@ const TextInputCustom = ({value, setValue}) => {
           <TextInput
             style={[styles.inputText]}
             // placeholder="Email"
+            placeholder={placeholder}
+            secureTextEntry={secureTextEntry}
+            keyboardType={keyboardType}
+            onChangeText={onChangeText}
+            value={value}
             onFocus={() => {
               setErr({});
               setIsFocused(true);
