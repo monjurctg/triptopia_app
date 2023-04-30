@@ -1,11 +1,15 @@
 import {StyleSheet, Text, View} from "react-native";
-import React from "react";
+import React, {useState} from "react";
 import MainLayout from "../../components/MainLayout";
 import {scale} from "../../../utils/scale";
 import TextInputCustom from "../../components/tags/TextInputCustom";
 import SubmitBtn from "../../components/buttons/SubmitBtn";
 
 const UserInfo = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+
   return (
     <MainLayout>
       <View style={styles.heading}>
@@ -18,9 +22,22 @@ const UserInfo = () => {
         Enter your information below to get started your trips
       </Text>
       <View style={styles.inputContainer}>
-        <TextInputCustom label={"NAME"} />
-        <TextInputCustom label={"EMAIL"} />
-        <TextInputCustom label={" PASSWORD"} secureTextEntry={true} />
+        <TextInputCustom
+          label={"NAME"}
+          onChangeText={(text) => setName(text)}
+          value={name}
+        />
+        <TextInputCustom
+          label={"EMAIL"}
+          value={email}
+          onChangeText={(text) => setEmail(text)}
+        />
+        <TextInputCustom
+          value={password}
+          label={" PASSWORD"}
+          onChangeText={(text) => setPassword(text)}
+          secureTextEntry={true}
+        />
       </View>
       <View>
         <SubmitBtn title={"get started"} style={{marginTop: 20}} />

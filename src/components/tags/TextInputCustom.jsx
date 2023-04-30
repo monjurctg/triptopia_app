@@ -5,7 +5,7 @@ import {scale} from "../../../utils/scale";
 const TextInputCustom = ({
   value,
   label,
-  setValue,
+
   name,
   err,
   setErr,
