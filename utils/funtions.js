@@ -1,12 +1,14 @@
 import {Dimensions, Text} from "react-native";
 import {presset} from "../src/components/tags/text.preset";
-const {width, height} = Dimensions.get("window");
 
 //Guideline sizes are based on standard ~5" screen mobile device
+const {width, height} = Dimensions.get("window");
 const guidelineBaseWidth = 350;
 const guidelineBaseHeight = 680;
 
-const scale = (size) => (width / guidelineBaseWidth) * size;
+// export const scale = (size) => {
+//   return (width / guidelineBaseWidth) * size;
+// };
 export const verticalScale = (size) => (height / guidelineBaseHeight) * size;
 export const moderateScale = (size, factor = 0.5) =>
   size + (scale(size) - size) * factor;

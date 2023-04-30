@@ -20,7 +20,7 @@ export const Base_bold = {
 };
 <Text style={{marginHorizontal: "bold"}}></Text>;
 
-export const presset = {
+const presset = {
   default: Base,
   // bold: Bold,
   h1: {
@@ -435,3 +435,5 @@ export const presset = {
     flexDirection: "row",
   },
 };
+
+export {presset};

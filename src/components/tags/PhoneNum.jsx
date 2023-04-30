@@ -8,8 +8,9 @@ import {
 import React, {useState} from "react";
 import {Image} from "native-base";
 import {AntDesign} from "@expo/vector-icons";
+import {scale} from "../../../utils/scale";
 
-const PhoneNum = () => {
+const PhoneNum = ({value, setValue}) => {
   const [isFocused, setIsFocused] = useState(false);
 
   return (
@@ -54,6 +55,7 @@ const PhoneNum = () => {
             <TextInput
               style={styles.inputText}
               // placeholder="Email"
+              keyboardType="decimal-pad"
               value={"1829940853"}
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
@@ -65,7 +67,7 @@ const PhoneNum = () => {
         </View>
         <View
           style={[styles.placeholder, isFocused && styles.focusedPlaceholder]}>
-          <Text style={styles.placeholderText}>Email Or phone number</Text>
+          <Text style={styles.placeholderText}>Mobile number</Text>
         </View>
       </View>
     </View>
@@ -74,9 +76,9 @@ const PhoneNum = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 100,
+    // marginTop: 100,
     paddingVertical: 10,
-    paddingHorizontal: 16,
+    // paddingHorizontal: 16,
   },
   borderLine: {
     borderWidth: 1,
@@ -102,6 +104,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     fontSize: 16,
     lineHeight: 22,
+    height: scale(35),
     color: "#272D37",
     // color: "#333333",
 
@@ -120,8 +123,8 @@ const styles = StyleSheet.create({
   placeholderText: {
     fontStyle: "normal",
     fontWeight: "500",
-    fontSize: 12,
-    lineHeight: 14,
+    fontSize: scale(10),
+    lineHeight: scale(14),
     letterSpacing: 0.04,
     textTransform: "uppercase",
     color: "#1F75EC",

@@ -6,6 +6,7 @@ import {NativeBaseProvider, Box} from "native-base";
 import TextInputCustom from "./src/components/tags/TextInputCustom";
 import PhoneNum from "./src/components/tags/PhoneNum";
 import CalenderCustom from "./src/screen/CalenderCustom";
+import InputMobile from "./src/screen/auth/InputMobile";
 
 export default function App() {
   // const [loaded, error] = useFonts({
@@ -21,10 +22,11 @@ export default function App() {
     <NativeBaseProvider>
       <View style={styles.container}>
         {/* <BookingSlider /> */}
-
-        {/* <TextInputCustom />
+        <InputMobile />
+        {/* 
+        <TextInputCustom />
         <TextInputCustom /> */}
-        <CalenderCustom />
+        {/* <CalenderCustom /> */}
 
         {/* <PhoneNum /> */}
 
@@ -39,6 +41,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     // alignItems: "center",
-    justifyContent: "center",
+    // justifyContent: "center",
   },
 });
