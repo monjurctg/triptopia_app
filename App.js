@@ -8,6 +8,8 @@ import PhoneNum from "./src/components/tags/PhoneNum";
 import CalenderCustom from "./src/screen/CalenderCustom";
 import InputMobile from "./src/screen/auth/InputMobile";
 import UserInfo from "./src/screen/auth/UserInfo";
+import ForgotPassword from "./src/screen/auth/ForgotPassword";
+import TabBar, {AnimatedViewExample} from "./src/screen/Test";
 
 export default function App() {
   // const [loaded, error] = useFonts({
@@ -24,7 +26,8 @@ export default function App() {
       <View style={styles.container}>
         {/* <BookingSlider /> */}
         {/* <InputMobile /> */}
-        <UserInfo />
+        {/* <UserInfo /> */}
+        {/* <ForgotPassword /> */}
 
         {/* <TextInputCustom label={"Phone "} />
         <TextInputCustom /> */}
