@@ -9,8 +9,11 @@ import CalenderCustom from "./src/screen/CalenderCustom";
 import InputMobile from "./src/screen/auth/InputMobile";
 import UserInfo from "./src/screen/auth/UserInfo";
 import SignIn from "./src/screen/auth/SignIn";
-import UnAuth from "./src/screen/Test";
+import {useEffect} from "react";
+import * as SplashScreen from "expo-splash-screen";
+
 import Home from "./src/screen/home/Home";
+// import Home from "./src/screen/home/Home";
 
 export default function App() {
   // const [loaded, error] = useFonts({
@@ -47,7 +50,6 @@ export default function App() {
         {/* <SignIn /> */}
         <Home />
 
-        <Home />
         {/* <TextInputCustom label={"Phone "} />
         <TextInputCustom /> */}
         {/* <CalenderCustom /> */}

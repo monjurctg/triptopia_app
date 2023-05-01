@@ -7,8 +7,6 @@ import View from "../../components/tags/View";
 
 import CustomTouchBtn from "../../components/tags/CustomTouchBtn";
 
-// import HeaderCard from "../../components/home/HeaderCard";
-
 import {width} from "../../../utils/funtions";
 import SingleHotelCard from "../../components/home/SingleHotelCard";
 import {scale} from "../../../utils/scale";
