@@ -9,8 +9,6 @@ import CalenderCustom from "./src/screen/CalenderCustom";
 import InputMobile from "./src/screen/auth/InputMobile";
 import UserInfo from "./src/screen/auth/UserInfo";
 import SignIn from "./src/screen/auth/SignIn";
-import UnAuth from "./src/screen/Test";
-import Home from "./src/screen/home/Home";
 
 export default function App() {
   // const [loaded, error] = useFonts({
@@ -28,8 +26,7 @@ export default function App() {
         {/* <BookingSlider /> */}
         {/* <InputMobile /> */}
         {/* <UserInfo /> */}
-        {/* <SignIn /> */}
-        <Home />
+        <SignIn />
 
         {/* <TextInputCustom label={"Phone "} />
         <TextInputCustom /> */}
