@@ -13,12 +13,13 @@ import {SafeAreaView} from "react-native-safe-area-context";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 const SCREEN_HEIGHT = Dimensions.get("window").height;
-const scale = (size) => (SCREEN_WIDTH / guidelineBaseWidth) * size;
 
 const guidelineBaseWidth = 350;
 const guidelineBaseHeight = 680;
 
-const CARD_WIDTH = scale(378);
+const scale = (size) => (SCREEN_WIDTH / guidelineBaseWidth) * size;
+
+const CARD_WIDTH = 378;
 const CARD_HEIGHT = scale(450);
 const BookingSlider = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -37,7 +38,7 @@ const BookingSlider = () => {
     ];
     return slides.map((slide, index) => (
       <View key={index} style={styles.slide}>
-        <View style={{height: scale(260), width: scale(289)}}>
+        <View style={{height: scale(250), width: scale(289)}}>
           <Image source={slide.image} style={styles.image} />
         </View>
       </View>
