@@ -8,35 +8,10 @@ import {scale} from "../../../utils/scale";
 
 const SingleHotelCard = () => {
   return (
-    <View
-      style={{
-        height: scale(340),
-        width: scale(280),
-        marginRight: scale(15),
-        backgroundColor: "#FFFFFF",
-        shadowColor: "#8F9CA9",
-        shadowOffset: {
-          width: 0,
-          height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 8,
-        borderRadius: 16,
-        elevation: 4,
-        padding: 8,
-
-        borderWidth: 1,
-        borderColor: "#E7ECF2",
-      }}>
+    <View style={styles.container}>
       <View>
         <Image
-          style={{
-            height: scale(120),
-            width: scale(265),
-            borderTopRightRadius: 12,
-            borderTopLeftRadius: 12,
-            resizeMode: "cover",
-          }}
+          style={styles.image}
           source={require("../../../assets/imgs/hotel.png")}
         />
         <View
@@ -165,7 +140,8 @@ const SingleHotelCard = () => {
             flexDirection: "row",
             justifyContent: "space-between",
             paddingLet: 10,
-            marginTop: scale(10),
+
+            marginTop: scale(5),
             alignItems: "center",
           }}>
           <Text
@@ -189,4 +165,31 @@ const SingleHotelCard = () => {
 
 export default SingleHotelCard;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    height: scale(325),
+    width: scale(250),
+    marginRight: scale(15),
+    backgroundColor: "#FFFFFF",
+    shadowColor: "#8F9CA9",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    borderRadius: 16,
+    elevation: 4,
+    padding: 8,
+
+    borderWidth: 1,
+    borderColor: "#E7ECF2",
+  },
+  image: {
+    height: scale(120),
+    width: scale(235),
+    borderTopRightRadius: 12,
+    borderTopLeftRadius: 12,
+    resizeMode: "cover",
+  },
+});

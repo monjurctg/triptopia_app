@@ -13,12 +13,14 @@ import {width} from "../../../utils/funtions";
 import SingleHotelCard from "../../components/home/SingleHotelCard";
 import {scale} from "../../../utils/scale";
 import HeaderCard from "../../components/home/HeaderCard";
+import HotelSlider from "../../components/slider/HotelSlider";
+import Hotel from "../../components/Hotels/Hotel";
 
 const Home = () => {
   return (
     <ScrollView>
       <StatusBar backgroundColor="#1F75EC" barStyle="light-content" />
-      <SafeAreaView></SafeAreaView>
+      {/* <SafeAreaView></SafeAreaView> */}
 
       <View
         style={{
@@ -34,7 +36,7 @@ const Home = () => {
           preset={["mt_15 center"]}
           style={{
             height: scale(45),
-            width: scale(300),
+            width: scale(310),
             borderRadius: scale(12),
 
             backgroundColor: "#1F75EC",
@@ -85,6 +87,7 @@ const Home = () => {
           </ScrollView>
         </View>
       </View>
+      <Hotel />
     </ScrollView>
   );
 };
