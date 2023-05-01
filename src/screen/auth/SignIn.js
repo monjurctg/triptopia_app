@@ -11,8 +11,6 @@ import MainLayout from "../../components/MainLayout";
 import { scale } from "../../../utils/scale";
 import PhoneNum from "../../components/tags/PhoneNum";
 import SubmitBtn from "../../components/buttons/SubmitBtn";
-import { useFonts } from "expo-font";
-import * as SplashScreen from "expo-splash-screen";
 import TextInputCustom from "../../components/tags/TextInputCustom";
 import Checkbox from "expo-checkbox";
 
@@ -21,23 +19,6 @@ const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isChecked, setChecked] = useState(true);
-
-  let [fontsLoaded] = useFonts({
-    Gilroy: require("../../../assets/fonts/Gilroy-Light.otf"),
-    GilroyBold: require("../../../assets/fonts/Gilroy-ExtraBold.otf"),
-    poppins: require("../../../assets/fonts/Poppins-Bold.ttf"),
-  });
-  useEffect(() => {
-    async function prepare() {
-      await SplashScreen.preventAutoHideAsync();
-    }
-    prepare();
-  }, [!fontsLoaded]);
-  if (!fontsLoaded) {
-    return undefined;
-  } else {
-    SplashScreen.hideAsync();
-  }
   return (
     <MainLayout>
       <View style={[styles.heading]}>
@@ -204,7 +185,7 @@ const SignIn = () => {
               color: "#1F75EC",
             }}
           >
-            Sign In
+            Sign Up
           </Text>
         </TouchableOpacity>
       </View>
