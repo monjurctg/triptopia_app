@@ -6,9 +6,9 @@ import {
   Image,
   Pressable,
 } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import MainLayout from "../../components/MainLayout";
-import { scale } from "../../../utils/scale";
+import {scale} from "../../../utils/scale";
 import PhoneNum from "../../components/tags/PhoneNum";
 import SubmitBtn from "../../components/buttons/SubmitBtn";
 import TextInputCustom from "../../components/tags/TextInputCustom";
@@ -31,8 +31,7 @@ const SignIn = () => {
             lineHeight: 40,
             textTransform: "capitalize",
             color: "#272D37",
-          }}
-        >
+          }}>
           Welcome back!
         </Text>
       </View>
@@ -43,8 +42,7 @@ const SignIn = () => {
           }}
           style={{
             width: "50%",
-          }}
-        >
+          }}>
           <Text style={[segmentActive ? styles.segmentActive : styles.segment]}>
             Email
           </Text>
@@ -55,8 +53,7 @@ const SignIn = () => {
           }}
           style={{
             width: "50%",
-          }}
-        >
+          }}>
           <Text style={[segmentActive ? styles.segment : styles.segmentActive]}>
             Phone
           </Text>
@@ -65,8 +62,7 @@ const SignIn = () => {
       <View
         style={{
           marginTop: 40,
-        }}
-      >
+        }}>
         {segmentActive ? (
           <TextInputCustom
             label={"EMAIL"}
@@ -83,11 +79,12 @@ const SignIn = () => {
           onChangeText={(text) => setPassword(text)}
           secureTextEntry={true}
         />
-        <View style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between"
-        }}>
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+          }}>
           <View style={styles.checkboxContainer}>
             <Checkbox
               style={styles.checkbox}
@@ -99,7 +96,7 @@ const SignIn = () => {
           </View>
           <View>
             <Pressable>
-              <Text style={[styles.label, { textDecorationLine: "underline" }]}>
+              <Text style={[styles.label, {textDecorationLine: "underline"}]}>
                 Forgot Password?
               </Text>
             </Pressable>
@@ -115,8 +112,7 @@ const SignIn = () => {
           alignItems: "center",
           justifyContent: "center",
           marginVertical: scale(20),
-        }}
-      >
+        }}>
         <Text
           style={{
             //   fontFamily: "Gilroy",
@@ -126,8 +122,7 @@ const SignIn = () => {
             lineHeight: 19,
             textAlign: "center",
             color: "#9299A0",
-          }}
-        >
+          }}>
           Or
         </Text>
       </View>
@@ -136,11 +131,10 @@ const SignIn = () => {
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "row",
-        }}
-      >
+        }}>
         <TouchableOpacity style={styles.socialIcon}>
           <Image
-            style={{ height: 30, width: 30 }}
+            style={{height: 30, width: 30}}
             source={{
               uri: "https://w7.pngwing.com/pngs/63/1016/png-transparent-google-logo-google-logo-g-suite-chrome-text-logo-chrome.png",
             }}
@@ -148,7 +142,7 @@ const SignIn = () => {
         </TouchableOpacity>
         <TouchableOpacity style={styles.socialIcon}>
           <Image
-            style={{ height: 40, width: 40 }}
+            style={{height: 40, width: 40}}
             source={{
               uri: "https://e7.pngegg.com/pngimages/670/159/png-clipart-facebook-logo-social-media-facebook-computer-icons-linkedin-logo-facebook-icon-media-internet.png",
             }}
@@ -161,8 +155,7 @@ const SignIn = () => {
           alignItems: "center",
           paddingVertical: scale(20),
           flexDirection: "row",
-        }}
-      >
+        }}>
         <Text
           style={{
             fontStyle: "normal",
@@ -170,8 +163,7 @@ const SignIn = () => {
             fontSize: 16,
             lineHeight: 22,
             color: "#8F9CA9",
-          }}
-        >
+          }}>
           Don't have an account?
         </Text>
 
@@ -183,8 +175,7 @@ const SignIn = () => {
               fontSize: 16,
               lineHeight: 22,
               color: "#1F75EC",
-            }}
-          >
+            }}>
             Sign Up
           </Text>
         </TouchableOpacity>
@@ -205,7 +196,6 @@ const styles = StyleSheet.create({
     fontSize: 33,
     lineHeight: 49,
     color: "#272D37",
-    fontFamily: "Gilroy",
   },
   text: {
     fontStyle: "normal",
@@ -219,6 +209,7 @@ const styles = StyleSheet.create({
   inputContainer: {
     marginTop: scale(20),
   },
+
   socialIcon: {
     backgroundColor: "#F5F7F9",
     borderRadius: 100,
