@@ -8,12 +8,7 @@ import PhoneNum from "./src/components/tags/PhoneNum";
 import CalenderCustom from "./src/screen/CalenderCustom";
 import InputMobile from "./src/screen/auth/InputMobile";
 import UserInfo from "./src/screen/auth/UserInfo";
-<<<<<<< HEAD
-import ForgotPassword from "./src/screen/auth/ForgotPassword";
-import TabBar, {AnimatedViewExample} from "./src/screen/Test";
-=======
 import SignIn from "./src/screen/auth/SignIn";
->>>>>>> 6f702b92aa74f4cb949c078b636a366b4bcb60f4
 
 export default function App() {
   // const [loaded, error] = useFonts({
