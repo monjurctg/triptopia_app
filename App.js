@@ -9,8 +9,7 @@ import CalenderCustom from "./src/screen/CalenderCustom";
 import InputMobile from "./src/screen/auth/InputMobile";
 import UserInfo from "./src/screen/auth/UserInfo";
 import SignIn from "./src/screen/auth/SignIn";
-import {useEffect} from "react";
-import * as SplashScreen from "expo-splash-screen";
+import UnAuth from "./src/screen/Test";
 import Home from "./src/screen/home/Home";
 
 export default function App() {
@@ -23,22 +22,6 @@ export default function App() {
   //   console.log(loaded, error);
   //   return <Text preset="p1">Font Loaded...</Text>;
   // }
-  let [fontsLoaded] = useFonts({
-    Gilroy: require("./assets/fonts/Gilroy-Light.otf"),
-    GilroyBold: require("./assets/fonts/Gilroy-ExtraBold.otf"),
-    poppins: require("./assets/fonts/Poppins-Bold.ttf"),
-  });
-  useEffect(() => {
-    async function prepare() {
-      await SplashScreen.preventAutoHideAsync();
-    }
-    prepare();
-  }, [!fontsLoaded]);
-  if (!fontsLoaded) {
-    return undefined;
-  } else {
-    SplashScreen.hideAsync();
-  }
   return (
     <NativeBaseProvider>
       <View style={styles.container}>

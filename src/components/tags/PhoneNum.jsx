@@ -76,8 +76,9 @@ const PhoneNum = ({value, setValue}) => {
 
 const styles = StyleSheet.create({
   container: {
-    // marginTop: 100,
+    marginTop: 15,
     paddingVertical: 10,
+
     // paddingHorizontal: 16,
   },
   borderLine: {
