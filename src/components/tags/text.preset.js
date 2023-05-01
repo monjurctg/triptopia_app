@@ -5,13 +5,13 @@ import {colors} from "../../theme/colors";
 import {typography} from "../../theme/typography";
 
 export const Base = {
-  // fontFamily: typography.regular,
+  fontFamily: typography.Gilroy,
   fontSize: scale(16),
   color: colors.black,
 };
 
 const Bold = {
-  // fontFamily: typography.bold,
+  fontFamily: typography.GilroyBold,
   color: colors.black,
 };
 export const Base_bold = {
@@ -27,30 +27,53 @@ const presset = {
   h1: {
     ...Bold,
     fontSize: scale(30),
+    fontFamily: typography.Gilroy,
   },
   bold: {
     fontWeight: "bold",
+    fontFamily: typography.GilroyBold,
   },
   h2: {
     ...Bold,
     fontSize: scale(24),
+    fontFamily: typography.GilroyBold,
   },
   h3: {
     ...Bold,
     fontSize: scale(20),
+    fontFamily: typography.GilroyBold,
   },
   p1: {
     ...Base,
     leineHeight: scale(30),
+    fontFamily: typography.Gilroy,
   },
   p2: {
     ...Base,
-    fontSize: scale(14),
+    fontSize: scale(24),
+    fontFamily: typography.Gilroy,
   },
   p3: {
     ...Base,
-    fontSize: scale(12),
+    fontSize: scale(20),
+    fontFamily: typography.Gilroy,
   },
+  p4: {
+    ...Base,
+    fontSize: scale(16),
+    fontFamily: typography.Gilroy,
+  },
+  p5: {
+    ...Base,
+    fontSize: scale(14),
+    fontFamily: typography.Gilroy,
+  },
+  p6: {
+    ...Base,
+    fontSize: scale(12),
+    fontFamily: typography.Gilroy,
+  },
+
   text_primary1: {
     color: colors.primary_1,
   },
@@ -128,6 +151,13 @@ const presset = {
   },
   fw_800: {
     fontWeight: "800",
+  },
+
+  ff_Gilroy: {
+    fontFamily: typography.Gilroy,
+  },
+  ff_bold_Gilroy: {
+    fontFamily: typography.Gilroy,
   },
 
   // font size

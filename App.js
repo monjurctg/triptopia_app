@@ -28,7 +28,7 @@ export default function App() {
   let [fontsLoaded] = useFonts({
     Gilroy: require("./assets/fonts/Gilroy-Light.otf"),
     GilroyBold: require("./assets/fonts/Gilroy-ExtraBold.otf"),
-    poppins: require("./assets/fonts/Poppins-Bold.ttf"),
+    // poppins: require("./assets/fonts/Poppins-Bold.ttf"),
   });
   useEffect(() => {
     async function prepare() {

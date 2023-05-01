@@ -37,7 +37,11 @@ const HeaderCard = () => {
             style={[styles.headerLogo, {backgroundColor: "#E8F1FF"}]}>
             <Image source={require("../../../assets/imgs/icons/hotel.png")} />
           </View>
-          <Text style={{textAlign: "center"}}>Hello</Text>
+          <Text
+            preset={["fs_12 ff_Gilroy fw_700"]}
+            style={{textAlign: "center"}}>
+            Hotel
+          </Text>
         </View>
         <View preset={[""]} style={styles.headerLogoContainer}>
           <View
@@ -45,7 +49,11 @@ const HeaderCard = () => {
             style={[styles.headerLogo, {backgroundColor: "#FEF0DE"}]}>
             <Image source={require("../../../assets/imgs/icons/villa.png")} />
           </View>
-          <Text style={{textAlign: "center"}}>Hello</Text>
+          <Text
+            preset={["fs_12 ff_Gilroy fw_700"]}
+            style={{textAlign: "center"}}>
+            Apartment
+          </Text>
         </View>
 
         <View style={styles.headerLogoContainer}>
@@ -54,7 +62,11 @@ const HeaderCard = () => {
             style={[styles.headerLogo, {backgroundColor: "#DBEFEE"}]}>
             <Image source={require("../../../assets/imgs/icons/beach.png")} />
           </View>
-          <Text style={{textAlign: "center"}}>Hello</Text>
+          <Text
+            preset={["fs_12 ff_Gilroy fw_700"]}
+            style={{textAlign: "center"}}>
+            Tour
+          </Text>
         </View>
       </View>
       <View>
@@ -77,14 +89,14 @@ const HeaderCard = () => {
               <Text preset={["fs_12 fw_400 lh_16"]} style={{color: "#8F9CA9"}}>
                 Check In
               </Text>
-              <Text preset={["fs_14 mt_10 fw_500 lh_20"]}>Mon,10 Oct 22.</Text>
+              <Text preset={["fs_14  mt_10 fw_500 lh_20"]}>Mon,10 Oct 22.</Text>
             </View>
           </View>
           <View style={styles.checkin}>
             <View>
               <Ionicons name="moon-sharp" size={24} color="#8F9CA9" />
               <Text
-                preset={["fs_12 mt_10 fw_400 lh_16"]}
+                preset={["fs_12 ff_Gilroy mt_10 fw_400 lh_16"]}
                 style={{color: "#8F9CA9"}}>
                 2 Nights
               </Text>

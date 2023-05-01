@@ -1,5 +1,5 @@
 export const typography = {
-  regular: "Popins-Regular",
-  bold: "Popins-Bold",
-  mediam: "Popins-Medium",
+  Gilroy: "Gilroy",
+  GilroyBold: "GilroyBold",
+  // mediam: "Popins-Medium",
 };
