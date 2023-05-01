@@ -8,6 +8,10 @@ import PhoneNum from "./src/components/tags/PhoneNum";
 import CalenderCustom from "./src/screen/CalenderCustom";
 import InputMobile from "./src/screen/auth/InputMobile";
 import UserInfo from "./src/screen/auth/UserInfo";
+import SignIn from "./src/screen/auth/SignIn";
+import {useEffect} from "react";
+import * as SplashScreen from "expo-splash-screen";
+import Home from "./src/screen";
 
 export default function App() {
   // const [loaded, error] = useFonts({
@@ -19,13 +23,31 @@ export default function App() {
   //   console.log(loaded, error);
   //   return <Text preset="p1">Font Loaded...</Text>;
   // }
+  let [fontsLoaded] = useFonts({
+    Gilroy: require("./assets/fonts/Gilroy-Light.otf"),
+    GilroyBold: require("./assets/fonts/Gilroy-ExtraBold.otf"),
+    poppins: require("./assets/fonts/Poppins-Bold.ttf"),
+  });
+  useEffect(() => {
+    async function prepare() {
+      await SplashScreen.preventAutoHideAsync();
+    }
+    prepare();
+  }, [!fontsLoaded]);
+  if (!fontsLoaded) {
+    return undefined;
+  } else {
+    SplashScreen.hideAsync();
+  }
   return (
     <NativeBaseProvider>
       <View style={styles.container}>
         {/* <BookingSlider /> */}
         {/* <InputMobile /> */}
-        <UserInfo />
+        {/* <UserInfo /> */}
+        {/* <SignIn /> */}
 
+        <Home />
         {/* <TextInputCustom label={"Phone "} />
         <TextInputCustom /> */}
         {/* <CalenderCustom /> */}

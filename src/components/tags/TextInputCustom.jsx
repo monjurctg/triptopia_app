@@ -2,6 +2,7 @@ import {StyleSheet, Text, TextInput, View} from "react-native";
 import React, {useState} from "react";
 import {MaterialIcons} from "@expo/vector-icons";
 import {scale} from "../../../utils/scale";
+import {Feather} from "@expo/vector-icons";
 const TextInputCustom = ({
   value,
   label,
@@ -15,6 +16,7 @@ const TextInputCustom = ({
   onChangeText,
 }) => {
   const [isFocused, setIsFocused] = useState(false);
+  const [isShowPassword, setIsShowPassword] = useState(true);
   console.log(err?.type);
 
   return (
@@ -46,7 +48,7 @@ const TextInputCustom = ({
             style={[styles.inputText]}
             // placeholder="Email"
             placeholder={placeholder}
-            secureTextEntry={secureTextEntry}
+            secureTextEntry={secureTextEntry ? isShowPassword : false}
             keyboardType={keyboardType}
             onChangeText={onChangeText}
             value={value}
@@ -59,6 +61,22 @@ const TextInputCustom = ({
             }}
             onBlur={() => setIsFocused(false)}
           />
+          {secureTextEntry && isShowPassword && (
+            <Feather
+              onPress={() => setIsShowPassword(false)}
+              name="eye-off"
+              size={24}
+              color="gray"
+            />
+          )}
+          {secureTextEntry && !isShowPassword && (
+            <Feather
+              onPress={() => setIsShowPassword(true)}
+              name="eye"
+              size={24}
+              color="gray"
+            />
+          )}
           <View
             style={[
               styles.placeholder,
