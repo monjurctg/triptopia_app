@@ -1,19 +1,20 @@
 import {Image, ScrollView, StatusBar, StyleSheet} from "react-native";
 import React from "react";
-import Text from "../components/tags/Text";
+import Text from "../../components/tags/Text";
 // import {scale, width} from "../../utils/funtions";
 import {SafeAreaView} from "react-native-safe-area-context";
-import View from "../components/tags/View";
+import View from "../../components/tags/View";
 
-import CustomTouchBtn from "../components/tags/CustomTouchBtn";
+import CustomTouchBtn from "../../components/tags/CustomTouchBtn";
 
-import {scale} from "../../utils/scale";
-import HeaderCard from "../components/home/HeaderCard";
+// import HeaderCard from "../../components/home/HeaderCard";
 
-import {width} from "../../utils/funtions";
-import SingleHotelCard from "../components/home/SingleHotelCard";
+import {width} from "../../../utils/funtions";
+import SingleHotelCard from "../../components/home/SingleHotelCard";
+import {scale} from "../../../utils/scale";
+import HeaderCard from "../../components/home/HeaderCard";
 
-const UnAuth = () => {
+const Home = () => {
   return (
     <ScrollView>
       <StatusBar backgroundColor="#1F75EC" barStyle="light-content" />
@@ -33,7 +34,7 @@ const UnAuth = () => {
           preset={["mt_15 center"]}
           style={{
             height: scale(45),
-            width: scale(320),
+            width: scale(300),
             borderRadius: scale(12),
 
             backgroundColor: "#1F75EC",
@@ -43,9 +44,7 @@ const UnAuth = () => {
         <ScrollView horizontal={true} style={{marginTop: 29}}>
           <Image
             style={{height: scale(130), width: scale(300), borderRadius: 12}}
-            source={{
-              uri: "https://images.pexels.com/photos/1087735/pexels-photo-1087735.jpeg?cs=srgb&dl=pexels-min-an-1087735.jpg&fm=jpg",
-            }}
+            source={require("../../../assets/imgs/travelBanner.png")}
           />
           <Image
             style={{
@@ -54,9 +53,7 @@ const UnAuth = () => {
               marginLeft: 10,
               borderRadius: 12,
             }}
-            source={{
-              uri: "https://images.pexels.com/photos/1087735/pexels-photo-1087735.jpeg?cs=srgb&dl=pexels-min-an-1087735.jpg&fm=jpg",
-            }}
+            source={require("../../../assets/imgs/travelBanner.png")}
           />
           <Image
             style={{
@@ -92,7 +89,7 @@ const UnAuth = () => {
   );
 };
 
-export default UnAuth;
+export default Home;
 
 const styles = StyleSheet.create({
   search: {
