@@ -1,6 +1,5 @@
 import {Text} from "react-native";
-import {scale} from "../../../utils/scale";
-// import {scale} from "../../../utils/funtions";
+import {scale} from "../../../utils/funtions";
 import {colors} from "../../theme/colors";
 import {typography} from "../../theme/typography";
 
