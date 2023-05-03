@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import React, {useState} from "react";
+import {StyleSheet, Text, TextInput, View} from "react-native";
 import MainLayout from "../components/MainLayout";
 import SubmitBtn from "../components/buttons/SubmitBtn";
-import { scale } from "../../utils/scale";
+import {scale} from "../../utils/scale";
 
 const OTPVerification = () => {
   const [otp, setOtp] = useState("");
@@ -13,10 +13,8 @@ const OTPVerification = () => {
 
   return (
     <MainLayout isHeader={true}>
-      <View style={{ marginBottom: 52 }}>
-        <View
-          style={{ display: "flex", flexDirection: "row", marginBottom: 8 }}
-        >
+      <View style={{marginBottom: 52}}>
+        <View style={{display: "flex", flexDirection: "row", marginBottom: 8}}>
           <Text
             style={{
               fontFamily: "Gilroy",
@@ -26,8 +24,7 @@ const OTPVerification = () => {
               lineHeight: 40,
               textTransform: "capitalize",
               color: "#272D37",
-            }}
-          >
+            }}>
             Verification{" "}
           </Text>
           <Text
@@ -38,8 +35,7 @@ const OTPVerification = () => {
               fontSize: 32,
               lineHeight: 40,
               color: "#272D37",
-            }}
-          >
+            }}>
             code!
           </Text>
         </View>
@@ -51,15 +47,13 @@ const OTPVerification = () => {
             fontWeight: "400",
             fontSize: 16,
             lineHeight: 22,
-          }}
-        >
+          }}>
           We sent you a verification code to your mobile{" "}
           <Text
             style={{
               color: "#272D37",
               fontWeight: "700",
-            }}
-          >
+            }}>
             +880-123456789
           </Text>
         </Text>
@@ -114,15 +108,13 @@ const OTPVerification = () => {
             fontSize: 16,
             lineHeight: 22,
             marginBottom: 24,
-          }}
-        >
+          }}>
           Resend:{" "}
           <Text
             style={{
               color: "#272D37",
               fontWeight: "700",
-            }}
-          >
+            }}>
             60s
           </Text>
         </Text>

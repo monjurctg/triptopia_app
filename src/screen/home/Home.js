@@ -11,6 +11,7 @@ import {width} from "../../../utils/funtions";
 import SingleHotelCard from "../../components/home/SingleHotelCard";
 import {scale} from "../../../utils/scale";
 import HeaderCard from "../../components/home/HeaderCard";
+import Hotels from "../../components/home/Hotels";
 
 const Home = () => {
   return (
@@ -79,6 +80,25 @@ const Home = () => {
             horizontal={true}>
             <SingleHotelCard />
             <SingleHotelCard />
+            <View style={{width: scale(40)}}></View>
+          </ScrollView>
+        </View>
+
+        <View preset={["mt_20 "]}>
+          <View preset={["row center jc_between"]} style={{width: scale(300)}}>
+            <Text preset={["fs_16 fw_600 "]}>Popular Hotels</Text>
+            <Text preset={["fs_14 fw_500"]} style={{color: "#8F9CA9"}}>
+              {" "}
+              View all
+            </Text>
+          </View>
+          <ScrollView
+            showsHorizontalScrollIndicator={false}
+            style={{marginTop: scale(10)}}
+            horizontal={true}>
+            <Hotels />
+            <Hotels />
+
             <View style={{width: scale(40)}}></View>
           </ScrollView>
         </View>

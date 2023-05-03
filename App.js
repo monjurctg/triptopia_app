@@ -13,6 +13,8 @@ import {useEffect} from "react";
 import * as SplashScreen from "expo-splash-screen";
 
 import Home from "./src/screen/home/Home";
+import OTPVerification from "./src/screen/OTPVerification";
+// import Test from "./src/components/Test";
 // import Home from "./src/screen/home/Home";
 
 export default function App() {
@@ -49,6 +51,8 @@ export default function App() {
         {/* <UserInfo /> */}
         {/* <SignIn /> */}
         <Home />
+        {/* <OTPVerification /> */}
+        {/* <Test /> */}
 
         {/* <TextInputCustom label={"Phone "} />
         <TextInputCustom /> */}
