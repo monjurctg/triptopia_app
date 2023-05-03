@@ -1,17 +1,19 @@
 import React, {useState, useRef, useEffect} from "react";
 import {View, Image, ScrollView, Dimensions, StyleSheet} from "react-native";
-import {width} from "../../utils/funtions";
-import {scale} from "../../utils/scale";
-import Text from "./tags/Text";
+import {scale} from "../../../utils/scale";
+import Text from "../tags/Text";
+// import {width} from "../../utils/funtions";
+// import {scale} from "../../utils/scale";
+// import Text from "./tags/Text";
 // import {scale} from "../../utils/functions";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
-const CARD_WIDTH = scale(255);
+const CARD_WIDTH = scale(235);
 const CARD_HEIGHT = scale(150);
 
 const AUTO_SWIPE_INTERVAL = 3000; // Change slides every 3 seconds
 
-const Test = () => {
+const HotelSlider = ({}) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const scrollViewRef = useRef(null);
   const slides = [
@@ -188,4 +190,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Test;
+export default HotelSlider;

@@ -14,19 +14,11 @@ import * as SplashScreen from "expo-splash-screen";
 
 import Home from "./src/screen/home/Home";
 import OTPVerification from "./src/screen/OTPVerification";
+import SearchLocation from "./src/screen/SearchLocation";
 // import Test from "./src/components/Test";
 // import Home from "./src/screen/home/Home";
 
 export default function App() {
-  // const [loaded, error] = useFonts({
-  //   "Popins-Medium": require("./assets/fonts/Poppins-Medium"),
-  //   "Popins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
-  //   "Popins-Bold": require("./assets/fonts/Poppins-Bold.ttf"),
-  // });
-  // if (loaded) {
-  //   console.log(loaded, error);
-  //   return <Text preset="p1">Font Loaded...</Text>;
-  // }
   let [fontsLoaded] = useFonts({
     Gilroy: require("./assets/fonts/Gilroy-Light.otf"),
     GilroyBold: require("./assets/fonts/Gilroy-ExtraBold.otf"),
@@ -43,6 +35,7 @@ export default function App() {
   } else {
     SplashScreen.hideAsync();
   }
+
   return (
     <NativeBaseProvider>
       <View style={styles.container}>
@@ -51,15 +44,13 @@ export default function App() {
         {/* <UserInfo /> */}
         {/* <SignIn /> */}
         <Home />
+        {/* <SearchLocation /> */}
         {/* <OTPVerification /> */}
         {/* <Test /> */}
-
         {/* <TextInputCustom label={"Phone "} />
         <TextInputCustom /> */}
         {/* <CalenderCustom /> */}
-
         {/* <PhoneNum /> */}
-
         {/* <StatusBar style="auto" /> */}
       </View>
     </NativeBaseProvider>

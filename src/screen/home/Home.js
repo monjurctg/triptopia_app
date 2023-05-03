@@ -87,8 +87,7 @@ const Home = () => {
         <View preset={["mt_20 "]}>
           <View preset={["row center jc_between"]} style={{width: scale(300)}}>
             <Text preset={["fs_16 fw_600 "]}>Popular Hotels</Text>
-            <Text preset={["fs_14 fw_500"]} style={{color: "#8F9CA9"}}>
-              {" "}
+            <Text preset={["fs_12 fw_500"]} style={{color: "#8F9CA9"}}>
               View all
             </Text>
           </View>

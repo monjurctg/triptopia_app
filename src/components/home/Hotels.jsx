@@ -8,6 +8,7 @@ import {Ionicons} from "@expo/vector-icons";
 import {FontAwesome5} from "@expo/vector-icons";
 import {MaterialCommunityIcons} from "@expo/vector-icons";
 import Test from "../Test";
+import HotelSlider from "../slider/HotelSlider";
 
 const Hotels = () => {
   return (
@@ -24,8 +25,8 @@ const Hotels = () => {
           }}
           source={require("../../../assets/imgs/hotel.png")}
         /> */}
-        <View style={{width: scale(260)}}>
-          <Test />
+        <View style={{width: scale(235)}}>
+          <HotelSlider />
         </View>
 
         {/* ino */}
@@ -170,7 +171,7 @@ const Hotels = () => {
         <View
           style={{
             paddingLeft: 10,
-            width: scale(270),
+            width: scale(235),
             height: scale(1.4),
             backgroundColor: "#E7ECF2",
             marginTop: scale(10),
@@ -213,7 +214,7 @@ export default Hotels;
 const styles = StyleSheet.create({
   container: {
     height: scale(340),
-    width: scale(280),
+    width: scale(250),
     marginRight: scale(15),
     backgroundColor: "#FFFFFF",
     shadowColor: "#8F9CA9",

@@ -10,8 +10,8 @@ const SingleHotelCard = () => {
   return (
     <View
       style={{
-        height: scale(340),
-        width: scale(280),
+        height: scale(350),
+        width: scale(250),
         marginRight: scale(15),
         backgroundColor: "#FFFFFF",
         shadowColor: "#8F9CA9",
@@ -31,8 +31,8 @@ const SingleHotelCard = () => {
       <View>
         <Image
           style={{
-            height: scale(120),
-            width: scale(265),
+            height: scale(140),
+            width: scale(235),
             borderTopRightRadius: 12,
             borderTopLeftRadius: 12,
             resizeMode: "cover",
@@ -117,7 +117,7 @@ const SingleHotelCard = () => {
                 fontSize: scale(11),
                 fontWeight: "500",
                 lineHeight: 16,
-                marginLeft: scale(10),
+                marginLeft: scale(2),
               }}>
               5 Hotels
             </Text>
@@ -130,7 +130,7 @@ const SingleHotelCard = () => {
                 fontSize: scale(11),
                 fontWeight: "500",
                 lineHeight: 16,
-                marginLeft: scale(10),
+                marginLeft: scale(2),
               }}>
               3 Resorts
             </Text>
@@ -144,7 +144,7 @@ const SingleHotelCard = () => {
                 fontSize: scale(11),
                 fontWeight: "500",
                 lineHeight: 16,
-                marginLeft: scale(10),
+                marginLeft: scale(2),
               }}>
               2 Apt.
             </Text>
@@ -154,7 +154,7 @@ const SingleHotelCard = () => {
         <View
           style={{
             paddingLeft: 10,
-            width: scale(270),
+            width: scale(220),
             height: scale(1.4),
             backgroundColor: "#E7ECF2",
             marginTop: scale(10),
