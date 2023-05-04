@@ -1,15 +1,21 @@
-import { View, Text } from "react-native";
-import React, { useState } from "react";
+import {View, Text} from "react-native";
+import React, {useState} from "react";
 import MainLayout from "../components/MainLayout";
 import TextInputCustom from "../components/tags/TextInputCustom";
-import { MaterialIcons, FontAwesome5 } from "@expo/vector-icons";
-import { scale } from "../../utils/scale";
+import {MaterialIcons, FontAwesome5} from "@expo/vector-icons";
+import {scale} from "../../utils/scale";
 import SubmitBtn from "../components/buttons/SubmitBtn";
 
 const SearchLocation = () => {
   const [search, setSearch] = useState("");
   return (
-    <MainLayout isHeader={true}>
+    <MainLayout
+      isHeader={true}
+      isLeft={true}
+      leftIcon="hello"
+      isMiddle={true}
+      handleLeftBtn={() => console.log("hello")}
+      middleText={"Middle"}>
       <TextInputCustom
         label={"SEARCH"}
         onChangeText={(text) => setSearch(text)}
@@ -25,9 +31,8 @@ const SearchLocation = () => {
             borderBottomWidth: 1.5,
             borderBottomColor: "#ADB9C7",
             paddingBottom: 10,
-          }}
-        >
-          <Text style={{ paddingTop: 3, marginRight: 12, width: 26 }}>
+          }}>
+          <Text style={{paddingTop: 3, marginRight: 12, width: 26}}>
             <MaterialIcons name="my-location" size={26} color="#66737F" />{" "}
           </Text>
           <Text
@@ -39,8 +44,7 @@ const SearchLocation = () => {
               fontWeight: "700",
               fontSize: 16,
               lineHeight: 30,
-            }}
-          >
+            }}>
             Find Nearby Properties
           </Text>
         </View>
@@ -51,16 +55,14 @@ const SearchLocation = () => {
             flexDirection: "row",
             marginTop: 15,
             paddingBottom: 10,
-          }}
-        >
+          }}>
           <Text
             style={{
               paddingTop: 3,
               marginRight: 12,
               width: 26,
               textAlign: "center",
-            }}
-          >
+            }}>
             <FontAwesome5 name="map-pin" size={26} color="black" />{" "}
           </Text>
           <Text
@@ -72,14 +74,13 @@ const SearchLocation = () => {
               fontWeight: "700",
               fontSize: 16,
               lineHeight: 30,
-            }}
-          >
+            }}>
             Choose on map
           </Text>
         </View>
       </View>
-      <View style={{ marginTop: 30 }}>
-        <Text style={{ color: "#8C949C" }}>Suggestions</Text>
+      <View style={{marginTop: 30}}>
+        <Text style={{color: "#8C949C"}}>Suggestions</Text>
         <View style={{marginBottom: 40}}>
           <View
             style={{
@@ -89,19 +90,17 @@ const SearchLocation = () => {
               justifyContent: "space-between",
               marginTop: 20,
               paddingBottom: 10,
-            }}
-          >
+            }}>
             <View
               style={{
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "row",
-              }}
-            >
-              <Text style={{ paddingTop: 3, marginRight: 10, width: 16 }}>
+              }}>
+              <Text style={{paddingTop: 3, marginRight: 10, width: 16}}>
                 <FontAwesome5 name="map-marker-alt" size={15} color="#1F75EC" />{" "}
               </Text>
-              <View style={{ width: 168 }}>
+              <View style={{width: 168}}>
                 <Text
                   style={{
                     color: "#0F182E",
@@ -109,8 +108,7 @@ const SearchLocation = () => {
                     fontStyle: "normal",
                     fontWeight: "700",
                     fontSize: 16,
-                  }}
-                >
+                  }}>
                   Taj Mahal
                 </Text>
                 <Text
@@ -120,8 +118,7 @@ const SearchLocation = () => {
                     fontStyle: "normal",
                     fontWeight: "400",
                     fontSize: 14,
-                  }}
-                >
+                  }}>
                   Jampur, Sonargoan, Narayanganj.
                 </Text>
               </View>
@@ -133,8 +130,7 @@ const SearchLocation = () => {
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: 14,
-              }}
-            >
+              }}>
               Landmark
             </Text>
           </View>
@@ -146,19 +142,17 @@ const SearchLocation = () => {
               justifyContent: "space-between",
               marginTop: 10,
               paddingBottom: 10,
-            }}
-          >
+            }}>
             <View
               style={{
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "row",
-              }}
-            >
-              <Text style={{ paddingTop: 3, marginRight: 10, width: 16 }}>
+              }}>
+              <Text style={{paddingTop: 3, marginRight: 10, width: 16}}>
                 <MaterialIcons name="hotel" size={15} color="#1F75EC" />{" "}
               </Text>
-              <View style={{ width: 168 }}>
+              <View style={{width: 168}}>
                 <Text
                   style={{
                     color: "#0F182E",
@@ -166,8 +160,7 @@ const SearchLocation = () => {
                     fontStyle: "normal",
                     fontWeight: "700",
                     fontSize: 16,
-                  }}
-                >
+                  }}>
                   Hotel Royal Taj
                 </Text>
                 <Text
@@ -177,8 +170,7 @@ const SearchLocation = () => {
                     fontStyle: "normal",
                     fontWeight: "400",
                     fontSize: 14,
-                  }}
-                >
+                  }}>
                   Jampur, Sonargoan, Narayanganj.
                 </Text>
               </View>
@@ -190,8 +182,7 @@ const SearchLocation = () => {
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: 14,
-              }}
-            >
+              }}>
               Property
             </Text>
           </View>
@@ -203,19 +194,17 @@ const SearchLocation = () => {
               justifyContent: "space-between",
               marginTop: 20,
               paddingBottom: 10,
-            }}
-          >
+            }}>
             <View
               style={{
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "row",
-              }}
-            >
-              <Text style={{ paddingTop: 3, marginRight: 10, width: 16 }}>
+              }}>
+              <Text style={{paddingTop: 3, marginRight: 10, width: 16}}>
                 <FontAwesome5 name="map-marker-alt" size={15} color="#1F75EC" />{" "}
               </Text>
-              <View style={{ width: 168 }}>
+              <View style={{width: 168}}>
                 <Text
                   style={{
                     color: "#0F182E",
@@ -223,8 +212,7 @@ const SearchLocation = () => {
                     fontStyle: "normal",
                     fontWeight: "700",
                     fontSize: 16,
-                  }}
-                >
+                  }}>
                   Jaflong
                 </Text>
                 <Text
@@ -234,8 +222,7 @@ const SearchLocation = () => {
                     fontStyle: "normal",
                     fontWeight: "400",
                     fontSize: 14,
-                  }}
-                >
+                  }}>
                   Jaflong, Sylhet
                 </Text>
               </View>
@@ -247,8 +234,7 @@ const SearchLocation = () => {
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: 14,
-              }}
-            >
+              }}>
               Location
             </Text>
           </View>

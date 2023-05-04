@@ -10,7 +10,17 @@ import { scale } from "../../utils/scale";
 import { AntDesign } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const MainLayout = ({ children, isHeader, isSkip, isBack }) => {
+const MainLayout = ({
+  children,
+  isHeader,
+  isSkip,
+  isMiddle,
+  middleText,
+  isBack,
+  isLeft,
+  leftIcon,
+  handleLeftBtn,
+}) => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -19,6 +29,12 @@ const MainLayout = ({ children, isHeader, isSkip, isBack }) => {
             <TouchableOpacity style={styles.back_btn}>
               <AntDesign name="left" size={18} color="#272D37" />
             </TouchableOpacity>
+            {isMiddle && <Text> {middleText}</Text>}
+            {isLeft && (
+              <TouchableOpacity onPress={{ handleLeftBtn }}>
+                <Text>{leftIcon}</Text>
+              </TouchableOpacity>
+            )}
             {isSkip && (
               <TouchableOpacity>
                 <Text style={styles.skip}>skip</Text>

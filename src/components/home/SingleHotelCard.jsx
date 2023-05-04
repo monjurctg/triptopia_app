@@ -1,17 +1,24 @@
-import {Image, StyleSheet, Text, View} from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 
-import {MaterialIcons} from "@expo/vector-icons";
-import {Ionicons} from "@expo/vector-icons";
-import {FontAwesome5} from "@expo/vector-icons";
-import {scale} from "../../../utils/scale";
+import { MaterialIcons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { scale } from "../../../utils/scale";
+import { Svg, Path, Circle } from "react-native-svg";
+
+import Profile from "../svg/Profile";
+import MessageSvg from "../svg/MessageSvg";
+import Reservation from "../svg/Reservation";
+import Notification from "../svg/Notofication";
+import HomeSvg from "../svg/HomeSvg";
 
 const SingleHotelCard = () => {
   return (
     <View
       style={{
-        height: scale(340),
-        width: scale(280),
+        height: scale(350),
+        width: scale(250),
         marginRight: scale(15),
         backgroundColor: "#FFFFFF",
         shadowColor: "#8F9CA9",
@@ -27,12 +34,13 @@ const SingleHotelCard = () => {
 
         borderWidth: 1,
         borderColor: "#E7ECF2",
-      }}>
+      }}
+    >
       <View>
         <Image
           style={{
-            height: scale(120),
-            width: scale(265),
+            height: scale(140),
+            width: scale(235),
             borderTopRightRadius: 12,
             borderTopLeftRadius: 12,
             resizeMode: "cover",
@@ -44,31 +52,20 @@ const SingleHotelCard = () => {
             flexDirection: "row",
             justifyContent: "space-between",
             marginTop: scale(15),
-          }}>
-          <View style={{alignItems: "center"}}>
-            <Ionicons name="home" size={scale(18)} color="#8F9CA9" />
-            <Text style={{color: "#8F9CA9", fontSize: scale(11)}}>Home</Text>
-          </View>
-          <View style={{alignItems: "center"}}>
-            <MaterialIcons name="message" size={scale(18)} color="#8F9CA9" />
-            <Text style={{color: "#8F9CA9", fontSize: scale(11)}}>Message</Text>
-          </View>
-          <View style={{alignItems: "center"}}>
-            <FontAwesome5 name="list-alt" size={scale(18)} color="#8F9CA9" />
-            <Text style={{color: "#8F9CA9", fontSize: scale(11)}}>
-              Reservation
-            </Text>
-          </View>
-          <View style={{alignItems: "center"}}>
-            <Ionicons
-              name="notifications-outline"
-              size={scale(18)}
-              color="#8F9CA9"
-            />
-            <Text style={{color: "#8F9CA9", fontSize: scale(11)}}>
-              Notification
-            </Text>
-          </View>
+          }}
+        >
+          <TouchableOpacity style={{ alignItems: "center" }}>
+            <HomeSvg />
+          </TouchableOpacity>
+          <TouchableOpacity style={{ alignItems: "center" }}>
+            <MessageSvg />
+          </TouchableOpacity>
+          <TouchableOpacity style={{ alignItems: "center" }}>
+            <Reservation />
+          </TouchableOpacity>
+          <TouchableOpacity style={{ alignItems: "center" }}>
+            <Notification />
+          </TouchableOpacity>
         </View>
         <Text
           style={{
@@ -76,7 +73,8 @@ const SingleHotelCard = () => {
             paddingLeft: scale(10),
             marginTop: scale(10),
             fontWeight: "600",
-          }}>
+          }}
+        >
           Dhaka
         </Text>
         <View
@@ -84,7 +82,9 @@ const SingleHotelCard = () => {
             flexDirection: "row",
             alignItems: "center",
             marginTop: scale(10),
-          }}>
+            marginLeft: scale(5),
+          }}
+        >
           <Ionicons
             name="ios-location-sharp"
             size={scale(18)}
@@ -92,11 +92,12 @@ const SingleHotelCard = () => {
           />
           <Text
             style={{
-              marginLeft: scale(10),
+              // marginLeft: scale(10),
               fontSize: scale(12),
               fontWeight: "400",
               color: "#8F9CA9",
-            }}>
+            }}
+          >
             Mithamoin Haor
           </Text>
         </View>
@@ -107,9 +108,10 @@ const SingleHotelCard = () => {
             flexDirection: "row",
             justifyContent: "space-between",
             marginTop: scale(15),
-            paddingLeft: 10,
-          }}>
-          <View style={{alignItems: "center", flexDirection: "row"}}>
+            paddingLeft: 8,
+          }}
+        >
+          <View style={{ alignItems: "center", flexDirection: "row" }}>
             <Ionicons name="ios-flag" size={scale(18)} color="#6E7491" />
             <Text
               style={{
@@ -117,12 +119,13 @@ const SingleHotelCard = () => {
                 fontSize: scale(11),
                 fontWeight: "500",
                 lineHeight: 16,
-                marginLeft: scale(10),
-              }}>
+                marginLeft: scale(2),
+              }}
+            >
               5 Hotels
             </Text>
           </View>
-          <View style={{alignItems: "center", flexDirection: "row"}}>
+          <View style={{ alignItems: "center", flexDirection: "row" }}>
             <Ionicons name="ios-flag" size={scale(18)} color="#6E7491" />
             <Text
               style={{
@@ -130,13 +133,14 @@ const SingleHotelCard = () => {
                 fontSize: scale(11),
                 fontWeight: "500",
                 lineHeight: 16,
-                marginLeft: scale(10),
-              }}>
+                marginLeft: scale(2),
+              }}
+            >
               3 Resorts
             </Text>
           </View>
 
-          <View style={{alignItems: "center", flexDirection: "row"}}>
+          <View style={{ alignItems: "center", flexDirection: "row" }}>
             <Ionicons name="ios-flag" size={scale(18)} color="#6E7491" />
             <Text
               style={{
@@ -144,8 +148,9 @@ const SingleHotelCard = () => {
                 fontSize: scale(11),
                 fontWeight: "500",
                 lineHeight: 16,
-                marginLeft: scale(10),
-              }}>
+                marginLeft: scale(2),
+              }}
+            >
               2 Apt.
             </Text>
           </View>
@@ -154,11 +159,12 @@ const SingleHotelCard = () => {
         <View
           style={{
             paddingLeft: 10,
-            width: scale(270),
+            width: scale(220),
             height: scale(1.4),
             backgroundColor: "#E7ECF2",
             marginTop: scale(10),
-          }}></View>
+          }}
+        ></View>
         {/*  */}
         <View
           style={{
@@ -167,9 +173,11 @@ const SingleHotelCard = () => {
             paddingLet: 10,
             marginTop: scale(10),
             alignItems: "center",
-          }}>
+          }}
+        >
           <Text
-            style={{fontSize: scale(12), color: "#8F9CA9", fontWeight: "400"}}>
+            style={{ fontSize: scale(12), color: "#8F9CA9", fontWeight: "400" }}
+          >
             Starting at
           </Text>
           <Text
@@ -177,9 +185,10 @@ const SingleHotelCard = () => {
               color: "#1F75EC",
               fontSize: scale(14),
               flexDirection: "row",
-            }}>
+            }}
+          >
             BDT{" "}
-            <Text style={{fontWeight: "600", fontSize: scale(18)}}>600</Text>
+            <Text style={{ fontWeight: "600", fontSize: scale(18) }}>600</Text>
           </Text>
         </View>
       </View>
