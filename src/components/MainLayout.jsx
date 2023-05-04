@@ -6,9 +6,9 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import {scale} from "../../utils/scale";
-import {AntDesign} from "@expo/vector-icons";
-import {SafeAreaView} from "react-native-safe-area-context";
+import { scale } from "../../utils/scale";
+import { AntDesign } from "@expo/vector-icons";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const MainLayout = ({
   children,
@@ -31,7 +31,7 @@ const MainLayout = ({
             </TouchableOpacity>
             {isMiddle && <Text> {middleText}</Text>}
             {isLeft && (
-              <TouchableOpacity onPress={{handleLeftBtn}}>
+              <TouchableOpacity onPress={{ handleLeftBtn }}>
                 <Text>{leftIcon}</Text>
               </TouchableOpacity>
             )}
