@@ -13,7 +13,7 @@ const CARD_HEIGHT = scale(150);
 
 const AUTO_SWIPE_INTERVAL = 3000; // Change slides every 3 seconds
 
-const HotelSlider = ({}) => {
+const HotelSlider = ({isSave}) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const scrollViewRef = useRef(null);
   const slides = [
@@ -69,11 +69,14 @@ const HotelSlider = ({}) => {
       <View key={index} style={styles.slide}>
         <View style={styles.save}></View>
         <Image source={slide.image} style={styles.image} />
-        <View style={styles.save}>
-          <Text preset={["fs_12  center"]} style={{color: "#FFFFFF"}}>
-            Save 30%
-          </Text>
-        </View>
+        {isSave && (
+          <View style={styles.save}>
+            <Text preset={["fs_12  center"]} style={{color: "#FFFFFF"}}>
+              Save 30%
+            </Text>
+          </View>
+        )}
+
         <View style={styles.rating}>
           <Text preset={["fs_12  center"]} style={{color: "#FFFFFF"}}>
             4.3/5
@@ -140,22 +143,22 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    paddingVertical: 1,
-    paddingHorizontal: 8,
+    // paddingVertical: 1,
+    paddingHorizontal: 5,
     gap: 8,
     position: "absolute",
-    width: scale(100),
+    width: scale(80),
     top: 12,
     right: 15,
-    height: scale(20),
+    height: scale(23),
     backgroundColor: "#1F75EC",
     borderRadius: 6,
   },
 
   rating: {
     position: "absolute",
-    width: scale(60),
-    height: scale(20),
+    width: scale(50),
+    height: scale(21),
     left: 16,
     bottom: 16,
     backgroundColor: "#FFAB4D",
@@ -163,8 +166,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    paddingVertical: 2,
-    paddingHorizontal: 12,
+    // paddingVertical: 2,
+    paddingHorizontal: 8,
     // gap: 8,
   },
 

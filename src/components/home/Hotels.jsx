@@ -10,7 +10,7 @@ import {MaterialCommunityIcons} from "@expo/vector-icons";
 import Test from "../Test";
 import HotelSlider from "../slider/HotelSlider";
 
-const Hotels = () => {
+const Hotels = ({isSave}) => {
   return (
     <View style={styles.container}>
       <View>
@@ -26,7 +26,7 @@ const Hotels = () => {
           source={require("../../../assets/imgs/hotel.png")}
         /> */}
         <View style={{width: scale(235)}}>
-          <HotelSlider />
+          <HotelSlider isSave={isSave} />
         </View>
 
         {/* ino */}
@@ -34,7 +34,7 @@ const Hotels = () => {
         <Text
           style={{
             fontSize: scale(14),
-            paddingLeft: scale(10),
+            paddingLeft: scale(6),
             marginTop: scale(10),
             fontWeight: "600",
           }}>
@@ -53,7 +53,7 @@ const Hotels = () => {
           />
           <Text
             style={{
-              marginLeft: scale(10),
+              marginLeft: scale(5),
               fontSize: scale(12),
               fontWeight: "400",
               color: "#1F75EC",
@@ -74,7 +74,7 @@ const Hotels = () => {
           />
           <Text
             style={{
-              marginLeft: scale(10),
+              marginLeft: scale(5),
               fontSize: scale(12),
               fontWeight: "400",
               color: "#8F9CA9",
