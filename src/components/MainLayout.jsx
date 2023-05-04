@@ -6,11 +6,11 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import {scale} from "../../utils/scale";
-import {AntDesign} from "@expo/vector-icons";
-import {SafeAreaView} from "react-native-safe-area-context";
+import { scale } from "../../utils/scale";
+import { AntDesign } from "@expo/vector-icons";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-const MainLayout = ({children, isHeader, isSkip, isBack}) => {
+const MainLayout = ({ children, isHeader, isSkip, isBack }) => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
