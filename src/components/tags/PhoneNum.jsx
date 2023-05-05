@@ -56,12 +56,13 @@ const PhoneNum = ({value, setValue}) => {
               style={styles.inputText}
               // placeholder="Email"
               keyboardType="decimal-pad"
-              value={"1829940853"}
+              value={value}
+              onChange={(text) => setValue(text)}
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
             />
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => setValue("")}>
             <AntDesign name="close" size={20} color="#1F75EC" />
           </TouchableOpacity>
         </View>

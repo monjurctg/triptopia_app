@@ -4,7 +4,7 @@ import MainLayout from "../components/MainLayout";
 import SubmitBtn from "../components/buttons/SubmitBtn";
 import {scale} from "../../utils/scale";
 
-const OTPVerification = () => {
+const OTPVerification = ({navigation}) => {
   const [otp, setOtp] = useState("");
 
   const handleOtpChange = (text) => {
@@ -118,7 +118,10 @@ const OTPVerification = () => {
             60s
           </Text>
         </Text>
-        <SubmitBtn title={"SUBMIT"} />
+        <SubmitBtn
+          onPress={() => navigation?.navigate("userInfo")}
+          title={"SUBMIT"}
+        />
       </View>
     </MainLayout>
   );

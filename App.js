@@ -1,10 +1,8 @@
 import {useFonts} from "expo-font";
-import {StatusBar} from "expo-status-bar";
-import {StyleSheet, Text, View} from "react-native";
+
+import {StyleSheet, View} from "react-native";
 import BookingSlider from "./src/screen/BookingSlider";
-import {NativeBaseProvider, Box} from "native-base";
-import TextInputCustom from "./src/components/tags/TextInputCustom";
-import PhoneNum from "./src/components/tags/PhoneNum";
+import {NativeBaseProvider} from "native-base";
 import CalenderCustom from "./src/screen/CalenderCustom";
 import InputMobile from "./src/screen/auth/InputMobile";
 import UserInfo from "./src/screen/auth/UserInfo";
@@ -15,6 +13,9 @@ import * as SplashScreen from "expo-splash-screen";
 import Home from "./src/screen/home/Home";
 import OTPVerification from "./src/screen/OTPVerification";
 import SearchLocation from "./src/screen/SearchLocation";
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
+import {NavigationContainer} from "@react-navigation/native";
+import ForgotPassword from "./src/screen/auth/ForgotPassword";
 // import Test from "./src/components/Test";
 // import Home from "./src/screen/home/Home";
 
@@ -36,22 +37,26 @@ export default function App() {
     SplashScreen.hideAsync();
   }
 
+  const Stack = createNativeStackNavigator();
+
   return (
     <NativeBaseProvider>
       <View style={styles.container}>
-        {/* <BookingSlider /> */}
-        {/* <InputMobile /> */}
-        {/* <UserInfo /> */}
-        {/* <SignIn /> */}
-        <Home />
-        {/* <SearchLocation /> */}
-        {/* <OTPVerification /> */}
-        {/* <Test /> */}
-        {/* <TextInputCustom label={"Phone "} />
-        <TextInputCustom /> */}
-        {/* <CalenderCustom /> */}
-        {/* <PhoneNum /> */}
-        {/* <StatusBar style="auto" /> */}
+        <NavigationContainer>
+          <Stack.Navigator
+            screenOptions={{
+              headerShown: false,
+              headerMode: "screen",
+            }}>
+            <Stack.Screen name="booking" component={BookingSlider} />
+            <Stack.Screen name="mobileInput" component={InputMobile} />
+            <Stack.Screen name="otp" component={OTPVerification} />
+            <Stack.Screen name="userInfo" component={UserInfo} />
+            <Stack.Screen name="home" component={Home} />
+            <Stack.Screen name="login" component={SignIn} />
+            <Stack.Screen name="forgotPass" component={ForgotPassword} />
+          </Stack.Navigator>
+        </NavigationContainer>
       </View>
     </NativeBaseProvider>
   );
@@ -60,6 +65,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // height: "100%",
     backgroundColor: "#fff",
     // alignItems: "center",
     // justifyContent: "center",

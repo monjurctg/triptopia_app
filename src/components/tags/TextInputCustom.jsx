@@ -65,7 +65,7 @@ const TextInputCustom = ({
             <Feather
               onPress={() => setIsShowPassword(false)}
               name="eye-off"
-              size={24}
+              size={20}
               color="gray"
             />
           )}
@@ -73,7 +73,7 @@ const TextInputCustom = ({
             <Feather
               onPress={() => setIsShowPassword(true)}
               name="eye"
-              size={24}
+              size={20}
               color="gray"
             />
           )}
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
   },
   inputText: {
     flex: 1,
-    fontSize: scale(14),
+    fontSize: 14,
     marginLeft: 8,
     height: scale(35),
     // color: "#333333",
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     left: 18,
     top: -10,
     paddingHorizontal: 4,
-    backgroundColor: "#fff",
+    backgroundColor: "#FFF",
   },
   focusedPlaceholder: {
     top: -10,
@@ -149,6 +149,7 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     fontWeight: "500",
     fontSize: 12,
+    // backgroundColor: "#fff",
     lineHeight: 14,
     letterSpacing: 0.04,
     textTransform: "uppercase",

@@ -25,14 +25,14 @@ const Home = () => {
   return (
     <ScrollView>
       <StatusBar backgroundColor="#1F75EC" barStyle="light-content" />
-      <SafeAreaView></SafeAreaView>
+      {/* <SafeAreaView></SafeAreaView> */}
 
       <View
         style={{
           width: width,
-          height: scale(170),
-          borderBottomLeftRadius: scale(40),
-          borderBottomRightRadius: scale(40),
+          height: scale(160),
+          borderBottomLeftRadius: scale(24),
+          borderBottomRightRadius: scale(24),
           backgroundColor: "#1F75EC",
         }}></View>
       <View style={{position: "relative", top: scale(-100), left: 24}}>
@@ -127,9 +127,7 @@ const Home = () => {
                   borderRadius: 6,
                   marginTop: 10,
                 }}>
-                <Text style={{color: "#FFFFFF", fontSize: scale(12)}}>
-                  Apply
-                </Text>
+                <Text style={{color: "#FFFFFF", fontSize: 12}}>Apply</Text>
               </TouchableOpacity>
             </View>
           </ImageBackground>
@@ -178,8 +176,8 @@ const Home = () => {
             showsHorizontalScrollIndicator={false}
             style={{marginTop: scale(10)}}
             horizontal={true}>
-            <Hotels isSave={true} />
-            <Hotels isSave={true} />
+            <Hotels isSave={true} isSlide={true} />
+            <Hotels isSave={true} isSlide={true} />
 
             <View style={{width: scale(40)}}></View>
           </ScrollView>
@@ -198,8 +196,28 @@ const Home = () => {
             showsHorizontalScrollIndicator={false}
             style={{marginTop: scale(10)}}
             horizontal={true}>
-            <Hotels />
-            <Hotels />
+            <Hotels isSlide={true} />
+            <Hotels isSlide={true} />
+
+            <View style={{width: scale(40)}}></View>
+          </ScrollView>
+        </View>
+
+        <View preset={["mt_20 "]}>
+          <View
+            preset={["row center pl_5 jc_between"]}
+            style={{width: scale(315)}}>
+            <Text preset={["fs_16 fw_600 "]}>Nearby Hotels</Text>
+            <Text preset={["fs_12 fw_500"]} style={{color: "#8F9CA9"}}>
+              View all
+            </Text>
+          </View>
+          <ScrollView
+            showsHorizontalScrollIndicator={false}
+            style={{marginTop: scale(10)}}
+            horizontal={true}>
+            <Hotels isImage={true} />
+            <Hotels isImage={true} />
 
             <View style={{width: scale(40)}}></View>
           </ScrollView>

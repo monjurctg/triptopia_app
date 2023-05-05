@@ -14,10 +14,11 @@ import SubmitBtn from "../../components/buttons/SubmitBtn";
 import TextInputCustom from "../../components/tags/TextInputCustom";
 import Checkbox from "expo-checkbox";
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
   const [segmentActive, setSegmentActive] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [number, setNumber] = useState("");
   const [isChecked, setChecked] = useState(true);
   return (
     <MainLayout>
@@ -70,7 +71,7 @@ const SignIn = () => {
             onChangeText={(text) => setEmail(text)}
           />
         ) : (
-          <PhoneNum />
+          <PhoneNum value={number} setValue={setNumber} />
         )}
 
         <TextInputCustom
@@ -95,7 +96,7 @@ const SignIn = () => {
             <Text style={styles.label}>Remember Me</Text>
           </View>
           <View>
-            <Pressable>
+            <Pressable onPress={() => navigation.navigate("forgotPass")}>
               <Text style={[styles.label, {textDecorationLine: "underline"}]}>
                 Forgot Password?
               </Text>
@@ -167,7 +168,9 @@ const SignIn = () => {
           Don't have an account?
         </Text>
 
-        <TouchableOpacity title={"Sign In"}>
+        <TouchableOpacity
+          title={"Sign In"}
+          onPress={() => navigation.navigate("mobileInput")}>
           <Text
             style={{
               fontStyle: "normal",

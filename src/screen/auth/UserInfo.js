@@ -5,7 +5,7 @@ import {scale} from "../../../utils/scale";
 import TextInputCustom from "../../components/tags/TextInputCustom";
 import SubmitBtn from "../../components/buttons/SubmitBtn";
 
-const UserInfo = () => {
+const UserInfo = ({navigation}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -40,7 +40,11 @@ const UserInfo = () => {
         />
       </View>
       <View>
-        <SubmitBtn title={"get started"} style={{marginTop: 20}} />
+        <SubmitBtn
+          onPress={() => navigation?.navigate("home")}
+          title={"get started"}
+          style={{marginTop: 20}}
+        />
       </View>
     </MainLayout>
   );

@@ -8,6 +8,8 @@ import PhoneNum from "../../components/tags/PhoneNum";
 
 const ForgotPassword = () => {
   const [activeButtonIndex, setActiveButtonIndex] = useState("Email");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
 
   const handleButtonPress = (index) => {
     setActiveButtonIndex(index);
@@ -47,11 +49,15 @@ const ForgotPassword = () => {
       {activeButtonIndex === "Email" && (
         <TextInputCustom
           label={"EMAIL"}
+          value={email}
+          onChangeText={(text) => setEmail(text)}
           placeholder={"percy jackson@gmail.com"}
         />
       )}
 
-      {activeButtonIndex === "Phone" && <PhoneNum />}
+      {activeButtonIndex === "Phone" && (
+        <PhoneNum value={phone} setValue={setPhone} />
+      )}
       <SubmitBtn title={"Send Code"} style={{marginTop: scale(25)}} />
     </MainLayout>
   );

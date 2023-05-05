@@ -1,12 +1,13 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
-import React from "react";
+import React, {useState} from "react";
 import PhoneNum from "../../components/tags/PhoneNum";
 import {SafeAreaView} from "react-native-safe-area-context";
 import MainLayout from "../../components/MainLayout";
 import SubmitBtn from "../../components/buttons/SubmitBtn";
 import {scale} from "../../../utils/scale";
 
-const InputMobile = () => {
+const InputMobile = ({navigation}) => {
+  const [number, setNumber] = useState("");
   return (
     <MainLayout isHeader={true}>
       <View style={{marginBottom: 20}}>
@@ -35,9 +36,12 @@ const InputMobile = () => {
           Phone Number?
         </Text>
       </View>
-      <PhoneNum />
+      <PhoneNum value={number} setValue={setNumber} />
       <View style={{marginTop: scale(30)}}>
-        <SubmitBtn title={"SEND CODE"} />
+        <SubmitBtn
+          onPress={() => navigation?.navigate("otp")}
+          title={"SEND CODE"}
+        />
       </View>
 
       <View
@@ -100,7 +104,9 @@ const InputMobile = () => {
           Already have an account?
         </Text>
 
-        <TouchableOpacity title={"Sign In"}>
+        <TouchableOpacity
+          title={"Sign In"}
+          onPress={() => navigation?.navigate("login")}>
           <Text
             style={{
               fontStyle: "normal",

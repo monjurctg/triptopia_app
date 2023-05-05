@@ -162,25 +162,25 @@ const presset = {
 
   // font size
   fs_30: {
-    fontSize: scale(30),
+    fontSize: 30,
   },
   fs_24: {
-    fontSize: scale(24),
+    fontSize: 24,
   },
   fs_20: {
-    fontSize: scale(20),
+    fontSize: 20,
   },
   fs_18: {
-    fontSize: scale(18),
+    fontSize: 18,
   },
   fs_16: {
-    fontSize: scale(16),
+    fontSize: 16,
   },
   fs_14: {
-    fontSize: scale(14),
+    fontSize: 14,
   },
   fs_12: {
-    fontSize: scale(12),
+    fontSize: 12,
   },
   // line height
   lh_14: {

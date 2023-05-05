@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  StatusBar,
 } from "react-native";
 import {AntDesign} from "@expo/vector-icons";
 import {SafeAreaView} from "react-native-safe-area-context";
@@ -20,8 +21,8 @@ const guidelineBaseHeight = 680;
 const scale = (size) => (SCREEN_WIDTH / guidelineBaseWidth) * size;
 
 const CARD_WIDTH = 378;
-const CARD_HEIGHT = scale(450);
-const BookingSlider = () => {
+const CARD_HEIGHT = scale(500);
+const BookingSlider = ({navigation}) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const renderSlides = () => {
@@ -38,7 +39,7 @@ const BookingSlider = () => {
     ];
     return slides.map((slide, index) => (
       <View key={index} style={styles.slide}>
-        <View style={{height: scale(250), width: scale(289)}}>
+        <View style={{height: scale(230), width: scale(289)}}>
           <Image source={slide.image} style={styles.image} />
         </View>
       </View>
@@ -54,20 +55,25 @@ const BookingSlider = () => {
 
   return (
     <View>
+      <StatusBar backgroundColor="#1F75EC" barStyle="light-content" />
+
       <View
         style={{
           justifyContent: "center",
           alignContent: "center",
           width: SCREEN_WIDTH,
+          borderBottomLeftRadius: scale(24),
+          borderBottomRightRadius: scale(24),
+          // backgroundColor: "#1F75EC",
         }}>
         <View
           style={{
             width: SCREEN_WIDTH,
-            height: scale(300),
-            borderTopLeftRadius: scale(40),
-            borderTopRightRadius: scale(40),
+            height: scale(240),
+            // borderTopLeftRadius: scale(40),
+            // borderTopRightRadius: scale(40),
             backgroundColor: "#1F75EC",
-            paddingTop: scale(40),
+            paddingTop: scale(20),
             paddingLeft: scale(20),
             paddingRight: scale(20),
           }}>
@@ -80,7 +86,8 @@ const BookingSlider = () => {
               <Text></Text>
             )}
 
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation?.navigate("mobileInput")}>
               <Text style={{color: "white"}}>Skip</Text>
             </TouchableOpacity>
           </View>
@@ -120,7 +127,8 @@ const BookingSlider = () => {
               />
             ))}
           </View>
-          <View
+          <TouchableOpacity
+            onPress={() => navigation?.navigate("mobileInput")}
             style={{
               backgroundColor: "#1F75EC",
               width: 60,
@@ -128,10 +136,10 @@ const BookingSlider = () => {
               borderRadius: 30,
               justifyContent: "center",
               alignItems: "center",
-              marginBottom: 20,
+              marginBottom: 50,
             }}>
             <AntDesign name="arrowright" size={24} color="white" />
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -160,7 +168,7 @@ const styles = StyleSheet.create({
     // borderRadius: 12,
     alignItems: "center",
     justifyContent: "center",
-    paddingBottom: scale(30),
+    paddingBottom: scale(50),
   },
   image: {
     width: "100%",

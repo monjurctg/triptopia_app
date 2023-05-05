@@ -6,9 +6,10 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import { scale } from "../../utils/scale";
-import { AntDesign } from "@expo/vector-icons";
-import { SafeAreaView } from "react-native-safe-area-context";
+import {scale} from "../../utils/scale";
+import {AntDesign} from "@expo/vector-icons";
+import {SafeAreaView} from "react-native-safe-area-context";
+import {useNavigation} from "@react-navigation/native";
 
 const MainLayout = ({
   children,
@@ -21,17 +22,20 @@ const MainLayout = ({
   leftIcon,
   handleLeftBtn,
 }) => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView>
       <View style={styles.container}>
         {isHeader && (
           <View style={styles.header}>
-            <TouchableOpacity style={styles.back_btn}>
+            <TouchableOpacity
+              onPress={() => navigation.goBack()}
+              style={styles.back_btn}>
               <AntDesign name="left" size={18} color="#272D37" />
             </TouchableOpacity>
             {isMiddle && <Text> {middleText}</Text>}
             {isLeft && (
-              <TouchableOpacity onPress={{ handleLeftBtn }}>
+              <TouchableOpacity onPress={{handleLeftBtn}}>
                 <Text>{leftIcon}</Text>
               </TouchableOpacity>
             )}
@@ -53,7 +57,7 @@ export default MainLayout;
 
 const styles = StyleSheet.create({
   container: {
-    padding: scale(20),
+    paddingHorizontal: scale(20),
   },
   header: {
     flexDirection: "row",
